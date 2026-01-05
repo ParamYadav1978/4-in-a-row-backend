@@ -3,6 +3,7 @@ package db
 import (
 	"database/sql"
 	"log"
+	"os"
 
 	_ "github.com/lib/pq"
 )
@@ -10,7 +11,12 @@ import (
 var DB *sql.DB
 
 func Connect() {
-	connStr := "host=localhost port=5432 user=postgres password=param1978 dbname=connect4 sslmode=disable"
+	// Get database URL from environment variable
+	connStr := os.Getenv("DATABASE_URL")
+	if connStr == "" {
+		// Fallback to localhost for development
+		connStr = "host=localhost port=5432 user=postgres password=param1978 dbname=connect4 sslmode=disable"
+	}
 
 	var err error
 	DB, err = sql.Open("postgres", connStr)
