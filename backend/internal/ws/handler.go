@@ -204,6 +204,8 @@ func HandleGameSocket(w http.ResponseWriter, r *http.Request) {
 
 			// 🤖 BOT MOVE (if bot game and bot's turn)
 			if isBotGame && currentPlayer == botPlayer {
+				// Add 1 second delay to make bot feel more natural
+				time.Sleep(1 * time.Second)
 
 				botCol := bot.ChooseMove(board, botPlayer, humanPlayer)
 				fmt.Println("BOT CHOSE COLUMN:", botCol)
