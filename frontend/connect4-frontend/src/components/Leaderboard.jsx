@@ -4,7 +4,7 @@ function Leaderboard({ refreshKey }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/leaderboard")
+    fetch("https://four-in-a-row-backend-qq63.onrender.com/leaderboard")
       .then(res => res.json())
       .then(d => {
         console.log("LEADERBOARD DATA:", d);

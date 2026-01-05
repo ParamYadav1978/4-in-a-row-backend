@@ -24,7 +24,7 @@ function App() {
 
   // 🔌 Connect WebSocket
   const connect = (name) => {
-    const ws = new WebSocket("ws://localhost:8080/ws");
+    const ws = new WebSocket("wss://four-in-a-row-backend-qq63.onrender.com/ws");
 
     ws.onopen = () => {
       ws.send(
