@@ -24,5 +24,5 @@ func main() {
 
 	router.RegisterRoutes()
 
-	http.ListenAndServe(":"+port, nil)
+	http.ListenAndServe("0.0.0.0:"+port, nil)
 }
