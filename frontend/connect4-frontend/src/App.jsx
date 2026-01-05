@@ -40,6 +40,11 @@ function App() {
       const msg = JSON.parse(event.data);
       console.log("SERVER:", msg);
 
+      if (msg.type === "connected") {
+        // Set player number immediately on connection
+        setPlayerNumber(msg.player || 1);
+      }
+
       if (msg.type === "bot_start") {
         // Bot fallback triggered after 10 seconds
         setPlayerNumber(1); // human is always player 1

@@ -48,7 +48,8 @@ func HandleGameSocket(w http.ResponseWriter, r *http.Request) {
 
 	// Send connected message (JSON only)
 	connectedMsg := Message{
-		Type: "connected",
+		Type:   "connected",
+		Player: humanPlayer, // Tell frontend they are player 1
 	}
 	response, _ := json.Marshal(connectedMsg)
 	conn.WriteMessage(websocket.TextMessage, response)
