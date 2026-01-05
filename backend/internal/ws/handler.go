@@ -102,6 +102,7 @@ func HandleGameSocket(w http.ResponseWriter, r *http.Request) {
 				botMsg := Message{
 					Type:     "bot_start",
 					Username: p.Username,
+					Player:   humanPlayer, // Human is always player 1 against bot
 				}
 				response, _ := json.Marshal(botMsg)
 				p.Conn.WriteMessage(websocket.TextMessage, response)
