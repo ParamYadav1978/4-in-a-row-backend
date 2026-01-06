@@ -166,7 +166,7 @@ func HandleGameSocket(w http.ResponseWriter, r *http.Request) {
 			if board.CheckWin(currentPlayer) {
 				gameOver = true
 
-				// 🏆 UPDATE LEADERBOARD (bot games only for now)
+				// UPDATE LEADERBOARD (bot games only for now)
 				if isBotGame {
 					if currentPlayer == game.Player1 {
 						db.RecordResult(username, "BOT", true)
@@ -193,7 +193,7 @@ func HandleGameSocket(w http.ResponseWriter, r *http.Request) {
 				currentPlayer = game.Player1
 			}
 
-			// ✅ SAVE SESSION HERE
+			//  SAVE SESSION HERE
 			session.CreateSession(username, board, currentPlayer)
 			// Send updated board
 			boardMsg := Message{
@@ -204,7 +204,7 @@ func HandleGameSocket(w http.ResponseWriter, r *http.Request) {
 			response, _ = json.Marshal(boardMsg)
 			conn.WriteMessage(websocket.TextMessage, response)
 
-			// 🤖 BOT MOVE (if bot game and bot's turn)
+			// BOT MOVE (if bot game and bot's turn)
 			if isBotGame && currentPlayer == botPlayer {
 				// Add 1 second delay to make bot feel more natural
 				time.Sleep(1 * time.Second)
@@ -219,7 +219,7 @@ func HandleGameSocket(w http.ResponseWriter, r *http.Request) {
 					if board.CheckWin(botPlayer) {
 						gameOver = true
 
-						// 🏆 UPDATE LEADERBOARD
+						// UPDATE LEADERBOARD
 						db.RecordResult("BOT", username, true)
 
 						winMsg := Message{
@@ -235,7 +235,7 @@ func HandleGameSocket(w http.ResponseWriter, r *http.Request) {
 
 					// switch back to human ONLY if bot didn't win
 					currentPlayer = humanPlayer
-					// ✅ SAVE SESSION HERE
+					// SAVE SESSION HERE
 					session.CreateSession(username, board, currentPlayer)
 
 					botBoardMsg := Message{

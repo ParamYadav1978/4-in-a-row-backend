@@ -1,8 +1,8 @@
-# 🎮 Connect 4 Backend
+# Connect 4 Backend
 
 Go backend server for Connect Four game with WebSocket support, intelligent bot AI, and PostgreSQL database.
 
-## 🏗️ Architecture
+## Architecture
 
 This backend handles:
 - **Real-time Communication**: WebSocket connections for live gameplay
@@ -11,7 +11,7 @@ This backend handles:
 - **Database Operations**: Player statistics and leaderboard
 - **Session Management**: Reconnection handling
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 backend/
@@ -43,7 +43,7 @@ backend/
 └── go.sum                    # Dependency checksums
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -176,7 +176,7 @@ GET /leaderboard
 ]
 ```
 
-## 🤖 Bot AI Algorithm
+##  Bot AI Algorithm
 
 The bot uses a strategic decision tree:
 
@@ -324,18 +324,18 @@ Enable debug logging:
 # The server prints bot moves and connection events
 go run ./cmd/server/main.go
 # Output:
-# ✅ Connected to PostgreSQL
+#  Connected to PostgreSQL
 # Starting HTTP server on port 8080...
 # BOT CHOSE COLUMN: 3
 ```
 
-## 🔐 Security Notes
+## Security Notes
 
 - WebSocket origin checking disabled for development (add in production)
 - Database credentials via environment variables only
 - No authentication required for MVP (add for production)
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -343,10 +343,5 @@ go run ./cmd/server/main.go
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
 
-MIT License - see LICENSE file for details
-
----
-
-**Built with Go 🚀**
+**Built with Go*

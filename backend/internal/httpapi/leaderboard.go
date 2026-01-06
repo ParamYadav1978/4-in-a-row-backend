@@ -9,7 +9,7 @@ import (
 
 func LeaderboardHandler(w http.ResponseWriter, r *http.Request) {
 
-	// ✅ CORS HEADERS (THIS FIXES YOUR ERROR)
+	// CORS HEADERS (THIS FIXES YOUR ERROR)
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")

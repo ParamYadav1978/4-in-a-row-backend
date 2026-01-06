@@ -5,7 +5,7 @@ A modern, real-time implementation of the classic Connect Four game with a beaut
 [![Live Demo](https://img.shields.io/badge/demo-live-success)](https://4-in-a-row-backend.vercel.app)
 [![GitHub](https://img.shields.io/badge/github-repository-blue)](https://github.com/ParamYadav1978/4-in-a-row-backend)
 
-## 🌟 Features
+##  Features
 
 ### Game Features
 - **Real-time Gameplay**: Instant move updates using WebSocket connections
@@ -29,13 +29,13 @@ A modern, real-time implementation of the classic Connect Four game with a beaut
 - **Session Management**: 30-second reconnection window for disconnected players
 - **Leaderboard System**: Track wins, losses, draws, and games played
 
-## 🚀 Live Demo
+##  Live Demo
 
 **Play Now**: [https://4-in-a-row-backend.vercel.app](https://4-in-a-row-backend.vercel.app)
 
 Simply enter your username and start playing! The game will automatically match you with a bot opponent after 10 seconds.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 18** - UI framework
@@ -53,7 +53,7 @@ Simply enter your username and start playing! The game will automatically match 
 - **Vercel** - Frontend hosting
 - **Render** - Backend and database hosting
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 4-in-a-row-backend/
@@ -81,7 +81,7 @@ Simply enter your username and start playing! The game will automatically match 
         └── package.json
 ```
 
-## 🎯 How to Play
+##  How to Play
 
 1. **Enter Username**: Type your name to join the game
 2. **Wait for Match**: A 10-second countdown will start looking for opponents
@@ -90,12 +90,12 @@ Simply enter your username and start playing! The game will automatically match 
 5. **Win the Game**: Connect 4 discs horizontally, vertically, or diagonally
 6. **Check Leaderboard**: Toggle the sidebar to see player rankings
 
-## 💻 Local Development
+## Local Development
 
 ### Prerequisites
-- **Go 1.23+** - [Download](https://golang.org/dl/)
-- **Node.js 18+** - [Download](https://nodejs.org/)
-- **PostgreSQL 14+** - [Download](https://www.postgresql.org/download/)
+- Go 1.23+ 
+- Node.js 18+ 
+- PostgreSQL 14+
 
 ### Backend Setup
 
@@ -155,7 +155,7 @@ CREATE TABLE leaderboard (
 ### HTTP
 - **`GET /leaderboard`** - Fetch leaderboard data
 
-## 🎨 Game Design Decisions
+##  Game Design Decisions
 
 ### Why Bot-Only Mode?
 Currently, the game focuses on single-player vs bot gameplay for stability and immediate playability. PvP mode requires additional complexity for:
@@ -174,7 +174,7 @@ The bot uses a strategic algorithm:
 ### 1-Second Bot Delay
 Adds human-like thinking time for better UX - prevents instant bot moves that feel unnatural.
 
-## 🚀 Deployment
+##  Deployment
 
 ### Frontend (Vercel)
 ```bash
@@ -190,58 +190,34 @@ Adds human-like thinking time for better UX - prevents instant bot moves that fe
 # - PORT: Server port (provided by Render)
 ```
 
-## 📊 Features Implemented
+##  Features Implemented
 
-- ✅ Real-time gameplay with WebSocket
-- ✅ Intelligent bot opponent
-- ✅ Matchmaking with countdown timer
-- ✅ Win/loss/draw detection
-- ✅ Persistent leaderboard
-- ✅ Session management
-- ✅ Custom disc colors
-- ✅ Smooth animations
-- ✅ Responsive design
-- ✅ Production deployment
+-  Real-time gameplay with WebSocket
+-  Intelligent bot opponent
+-  Matchmaking with countdown timer
+-  Win/loss/draw detection
+-  Persistent leaderboard
+-  Session management
+-  Custom disc colors
+-  Smooth animations
+-  Responsive design
+-  Production deployment
 
-## 🔮 Future Enhancements
 
-- [ ] Player vs Player (PvP) mode
-- [ ] Multiple difficulty levels for bot
-- [ ] Game replay system
-- [ ] Chat functionality
-- [ ] Tournament mode
-- [ ] Player profiles with avatars
-- [ ] Sound effects
-- [ ] Mobile app version
-
-## 👨‍💻 Author
+##  Author
 
 **Param Yadav**
 - GitHub: [@ParamYadav1978](https://github.com/ParamYadav1978)
 - Email: [Your Email]
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Classic Connect Four game inspiration
 - React and Go communities
 - Vercel and Render for hosting
 
 ---
-
-**Made with ❤️ and ☕ by Param Yadav**
-
----
-
-## Game State Management
-- Active games stored in memory
-- Completed games stored in PostgreSQL
-- Game analytics emitted asynchronously
-
----
-
-## Status
-Day 1 completed: System understanding and design finalized.

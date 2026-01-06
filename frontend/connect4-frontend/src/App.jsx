@@ -25,7 +25,7 @@ function App() {
   const [countdown, setCountdown] = useState(10); // Countdown timer
 
 
-  // 🔌 Connect WebSocket
+  // Connect WebSocket
   const connect = (name) => {
     const ws = new WebSocket("wss://four-in-a-row-backend-qq63.onrender.com/ws");
 
@@ -114,7 +114,7 @@ function App() {
     setGameOver(false);
   };
 
-  // 🎯 Send move
+  // Send move
   const playMove = (col) => {
     if (!connected) return;
     if (!gameStarted) return; // Don't allow moves until game starts

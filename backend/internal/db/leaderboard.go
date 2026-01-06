@@ -27,7 +27,7 @@ func RecordResult(winner string, loser string, isBot bool) {
 	EnsurePlayer(winner)
 	EnsurePlayer(loser)
 
-	// ✅ Update winner (only if human)
+	// Update winner (only if human)
 	if winner != "BOT" {
 		DB.Exec(`
 		UPDATE leaderboard
@@ -39,7 +39,7 @@ func RecordResult(winner string, loser string, isBot bool) {
 		`, winner)
 	}
 
-	// ✅ Update loser (only if human)
+	// Update loser (only if human)
 	if loser != "BOT" {
 		DB.Exec(`
 		UPDATE leaderboard
@@ -51,7 +51,7 @@ func RecordResult(winner string, loser string, isBot bool) {
 		`, loser)
 	}
 
-	// 🤖 Bot game count → ONLY HUMAN
+	// Bot game count - ONLY HUMAN
 	if isBot {
 		if winner != "BOT" {
 			DB.Exec(`
